@@ -1,0 +1,229 @@
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  --font-size: 15px;
+  --font-family: "League Spartan", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-url: url("./images/bg-pattern-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  padding: 3rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+
+.top-section h1 {
+  color: var(--Very-Dark-Magenta);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.top-section p {
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating p {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+}
+
+.rating1 {
+  align-self: flex-start;
+}
+
+.rating3 {
+  align-self: flex-end;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 33%;
+  height: 85%;
+  padding: 2rem;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 0.5rem;
+}
+
+.testimonial p {
+  color: var(--White);
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.testimonial_1 {
+  align-self: flex-start;
+}
+
+.testimonial_3 {
+  align-self: flex-end;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.testimonial-text h2 {
+  color: var(--White);
+  font-weight: 600;
+}
+
+.testimonial-text p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--Soft-Pink);
+  font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    text-align: center;
+    max-height: 90vh; /* Adjust height to fit within the viewport */
+    overflow-y: auto; /* Allow scrolling */
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .top-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .top-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .top-section p {
+    font-size: 1rem;
+  }
+
+  .ratings {
+    width: 100%;
+    padding: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .rating {
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .testimonial {
+    width: 100%;
+    align-items: center;
+  }
+}
